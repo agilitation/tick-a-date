@@ -1,0 +1,150 @@
+html {font-size: 0.875em;}
+
+body {
+  background-color: #F5F5F5;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
+}
+
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 5.063em;
+  font-weight: 900;
+}
+
+h2 {font-size: 3.375em;}
+
+h3 {font-size: 2.25em;}
+
+h4 {font-size: 1.5em;}
+
+small, .font_small {font-size: 0.667em;}
+
+.content {
+	padding: 2em;
+}
+
+header.main  {
+	background: white;
+}
+
+header h1 {
+	margin: 0;
+}
+
+header .baseline {
+	margin: 0;
+	font-weight: 800;
+	font-size: 2.25em;
+	color: orange;
+}
+
+#page {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1000px;
+	margin: 3em auto;
+	background: white;
+	box-shadow: 0 0 2em rgba(0,0,0,0.1);
+}
+
+aside.phone {
+	flex: 1;
+	background: orange;
+	position: relative;
+	min-height: 800px;
+	min-width: 400px;
+}
+
+.phone .container {
+	position: relative;
+}
+
+.phone ul {
+	position: absolute;
+	width: 300px;
+	height: 600px;
+	left: 50%;
+	margin-left: -152px;
+	margin-top: 121px;
+}
+
+.phone li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.phone li.visible {
+	display: block;
+}
+
+.phone img {
+	width: 304px;
+}
+
+
+img.frame {
+	position: absolute;
+	z-index: 100;
+	width: 400px;
+	left: 50%;
+	margin-left: -200px;
+}
+
+#app-icon {
+	max-width: 500px;
+}
+
+ol {
+	list-style-type: decimal;
+	font-size: 1.4em;
+	margin-left: 1em;
+}
+
+.green header .baseline {
+	color: #68d845;
+}
+
+.green aside.phone {
+	background: #68d845;
+}
+
+
+.orange header .baseline {
+	color: #fd9426;
+}
+
+.orange aside.phone {
+	background: #fd9426;
+}
+
+
+
+.blue header .baseline {
+	color: #2aaef5;
+}
+
+.blue aside.phone {
+	background: #2aaef5;
+}
+
+
+.marroon header .baseline {
+	color: #a18360;
+}
+
+.marroon aside.phone {
+	background: #a18360;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tick a date</title>
+		<link rel="stylesheet" type="text/css" href="reset.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body class="green">
+		<div id="page">
+			<aside class="phone">
+				<div class="container">
+					<ul class="screenshots">
+						<li class="visible" data-color="green"><img src="screenshots/01-calendar-view.jpg" alt="Screenshot of calendar view"></li>
+						<li data-color="blue"><img src="screenshots/02-configure-event-calendar.jpg" alt="Screenshot of calendar view"></li>
+						<li data-color="marroon"><img src="screenshots/03-event-with-details.jpg" alt="Screenshot of calendar view"></li>
+						<li data-color="orange"><img src="screenshots/04-events-of-day.jpg" alt="Screenshot of calendar view"></li>
+						<li data-color="blue"><img src="screenshots/05-stats.jpg" alt="Screenshot of calendar view"></li>
+					</ul>
+					<img class="frame" src="phoneframe.png"/>
+				</div>
+			</aside>
+			<div class="content">
+				
+				<header id="header" class="main">
+					<h1>tick a date</h1>
+					<p class="baseline">keep track of recurring events</p>
+				</header>
+				<section id="how-to">
+					<h2>How to</h2>
+					<ol>
+						<li>Pick the event</li>
+						<li>Choose the date</li>
+						<li>Tick!</li>
+					</ol>
+				</section>
+				
+			</div>
+		</div>
+		
+		<script
+		src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous"></script>
+		<script type="text/javascript" charset="utf-8">
+			
+			$(".phone").click(function(){
+				var $screenshots = $(".screenshots li");
+				var $visible = $screenshots.filter(".visible");
+				var $nextVisible;
+				var selectedIndex = $visible.index();
+				if (selectedIndex < $screenshots.length - 1) {
+					$nextVisible = $screenshots.eq(selectedIndex + 1);
+				} else {
+					$nextVisible = $screenshots.eq(0)
+				}
+				$nextVisible.addClass("visible");
+				$visible.removeClass("visible");
+				$("body").attr("class", $nextVisible.data("color"));
+			});
+		</script>
+	</body>
+</html>
